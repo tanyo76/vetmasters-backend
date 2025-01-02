@@ -5,6 +5,7 @@ import { EmployeesModule } from './modules/employees/employees.module';
 import { OrganizationsModule } from './modules/organizations/organizations.module';
 import { ClinicsModule } from './modules/clinics/clinics.module';
 import { ConfigModule } from '@nestjs/config';
+import { PrismaModule } from './common/database/prisma.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { ConfigModule } from '@nestjs/config';
     OrganizationsModule,
     ClinicsModule,
     ConfigModule.forRoot(),
+    PrismaModule,
   ],
   controllers: [AppController],
   providers: [AppService],
