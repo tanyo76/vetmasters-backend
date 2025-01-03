@@ -1,3 +1,3 @@
 npm run prisma:migrate:dev
 
-npm run start:prod
+npm run start:dev

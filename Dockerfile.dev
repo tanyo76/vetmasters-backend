@@ -16,12 +16,10 @@ COPY . .
 # Copy the .env and .env.development files
 COPY .env ./
 
-RUN npm run build
-
 RUN npm run prisma:generate
 
 # Expose the port on which the app will run
 EXPOSE 8080
 
 # Start the server using the production build
-ENTRYPOINT [ "bash", "./scripts/docker-entrypoint-prod.sh" ]
+ENTRYPOINT [ "bash", "./scripts/docker-entrypoint-dev.sh" ]
