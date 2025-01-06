@@ -6,9 +6,11 @@ import { OrganizationsModule } from './modules/organizations/organizations.modul
 import { ClinicsModule } from './modules/clinics/clinics.module';
 import { ConfigModule } from '@nestjs/config';
 import { PrismaModule } from './common/database/prisma.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
   imports: [
+    AuthModule,
     EmployeesModule,
     OrganizationsModule,
     ClinicsModule,

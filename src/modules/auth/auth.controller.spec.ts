@@ -1,17 +1,17 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { EmployeesController } from './employees.controller';
+import { AuthController } from './auth.controller';
 import { CognitoService } from '../../common/cognito/cognito.service';
 
 describe('EmployeesController', () => {
-  let controller: EmployeesController;
+  let controller: AuthController;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      controllers: [EmployeesController],
+      controllers: [AuthController],
       providers: [CognitoService],
     }).compile();
 
-    controller = module.get<EmployeesController>(EmployeesController);
+    controller = module.get<AuthController>(AuthController);
   });
 
   it('should be defined', () => {
